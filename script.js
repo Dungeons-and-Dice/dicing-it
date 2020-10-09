@@ -13,14 +13,17 @@ $(function(){
             const randomNumber = Math.floor(Math.random() * diceOptions[chosenDice]) + 1;
             return(randomNumber);
         },
+        getModifier: function() {
+            const inputModifier = parseInt($('#modifier').val());
+            return(inputModifier);
+        },
     };
-
+    
+    
     $('#buttons button').click(function() {
         chosenDice = $(this).attr('id');
-        modifier = parseInt( $("#modifier").val());
-        console.log(modifier);
         let diceRoll = diceOptions.roll();
-        console.log(diceRoll);
+        let modifier = diceOptions.getModifier();
         let result = diceRoll + modifier;
         
         $('#printedNumber').text(`${result}`);
@@ -29,14 +32,17 @@ $(function(){
     // Second Dice Part
 
     $('#otherDice button').click(function () {
-        let radioValue = $('input[name="dice"]:checked').val();
-        console.log(radioValue);
+        chosenDice = $('input[name="dice"]:checked').val();
+        let diceRoll = diceOptions.roll();
+        let modifier = diceOptions.getModifier();
+        let result = diceRoll + modifier
+        $('#secondPrintedNumber').text(`${result}`);
+
     });
 });
-
-// Input field, get number, roll that many dice
-
-    
+  
 // * Do we want to display the roll and modifier? 
+// ? Set default mod to 0
+// ! Refactor the rolling functions so we're declaring less identical variables (callbacks/promises????) 
     
         
