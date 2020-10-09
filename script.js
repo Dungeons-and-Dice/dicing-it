@@ -1,4 +1,8 @@
 $(function(){
+
+
+
+
     let dice ={
         side:6,
         roll: function (){
