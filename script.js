@@ -24,10 +24,19 @@ $(function(){
         },
     }
 
+    //to get value of modifier, we need to add number to text box, .val and add it to the rolled number
+
+
     $('#buttons button').click(function() {
         chosenDice = $(this).attr('id');
-        let result = diceOptions.roll();
-        $('#printedNumber').text(`${result}`)
+        modifier = parseInt( $("#modifier").val());
+        console.log(modifier)
+        let diceRoll = diceOptions.roll()
+        console.log(diceRoll)
+        let result = diceRoll + modifier;
+        
+        $('#printedNumber').text(`${result}`);
+
     });
 });
     
