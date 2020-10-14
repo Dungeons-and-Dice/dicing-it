@@ -22,9 +22,12 @@ $(function(){
 
         getNumberOfDice: function(){
             const diceNumber = parseInt($('#diceNumber').val());
-            for(let i = 0; i <= diceNumber; i++){
-                console.log(i)
-            
+            for(let i = 1; i <= diceNumber; i++){
+                // console.log(i)
+                // const diceNumberRoll = Math.floor(Math.random() * this.roll()) + 1;
+                const diceNumberRoll = this.roll()
+                console.log(diceNumberRoll)
+                this.dieContainer.text(diceNumberRoll)
             }
             
             // return(diceNumber)
