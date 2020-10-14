@@ -26,7 +26,7 @@ $(function(){
         let modifier = diceOptions.getModifier();
         let result = diceRoll + modifier;
         
-        $('#printedNumber').text(`${result}`);
+        $('#printedNumber').text(`${diceRoll} + ${modifier} = ${result}`);
     });
 
     // Second Dice Part
@@ -36,7 +36,7 @@ $(function(){
         let diceRoll = diceOptions.roll();
         let modifier = diceOptions.getModifier();
         let result = diceRoll + modifier
-        $('#secondPrintedNumber').text(`${result}`);
+        $('#secondPrintedNumber').text(`${diceRoll} + ${modifier} = ${result}`);
 
     });
 });
