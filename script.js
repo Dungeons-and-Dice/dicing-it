@@ -1,6 +1,9 @@
 $(function(){
     let chosenDice = 0;
 
+    // Try to get this into diceOptions
+    const diceArray = [];
+
     let diceOptions = {
         d4: 4,
         d6: 6,
@@ -20,19 +23,21 @@ $(function(){
 
         dieContainer : $('#dieContainer'),
 
+        // for (let i = 0; i < diceArrray.length; i++ ) {sum += diceArray[i]}
+
         rollNumberOfDice: function(){
             const diceNumber = parseInt($('#diceNumber').val());
             for(let i = 1; i <= diceNumber; i++){
-                const diceNumberRoll = this.roll()
-                console.log(diceNumberRoll)
-                this.dieContainer.append(`${diceNumberRoll} + `)
+                const diceNumberRoll = this.roll();
+                diceArray.push(diceNumberRoll);
+                this.dieContainer.append(`${diceNumberRoll} + `);
             }
             
-            this.dieContainer.append(`${diceOptions.getModifier()}`);
-
-          
-        }
-        
+            this.dieContainer.append(`${diceOptions.getModifier()} (Modifier) <br>`);
+            console.log(diceArray);
+            // use forEach loop to add all the items or list them or something (map with a variable)
+            // Print total
+        },
     };
     
     
