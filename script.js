@@ -20,19 +20,17 @@ $(function(){
 
         dieContainer : $('#dieContainer'),
 
-        getNumberOfDice: function(){
+        rollNumberOfDice: function(){
             const diceNumber = parseInt($('#diceNumber').val());
             for(let i = 1; i <= diceNumber; i++){
-                // console.log(i)
-                // const diceNumberRoll = Math.floor(Math.random() * this.roll()) + 1;
                 const diceNumberRoll = this.roll()
                 console.log(diceNumberRoll)
-                this.dieContainer.text(diceNumberRoll)
+                this.dieContainer.append(`${diceNumberRoll} + `)
             }
             
-            // return(diceNumber)
-            //for loop will repeat, so lets make a variable for diceNumberI,  then diceNumberI.roll
-            //outside of for loop, dice.'all the i's put together' will be out result 
+            this.dieContainer.append(`${diceOptions.getModifier()}`);
+
+          
         }
         
     };
@@ -51,19 +49,10 @@ $(function(){
 
     $('#otherDice button').click(function () {
         chosenDice = $('input[name="dice"]:checked').val();
-        let diceRoll = diceOptions.roll();
-        let modifier = diceOptions.getModifier();
-        let result = diceRoll + modifier
-        $('#secondPrintedNumber').text(`${diceRoll} + ${modifier} = ${result}`);
-        diceOptions.getNumberOfDice()
+        diceOptions.rollNumberOfDice()
     });
 });
-  
-// * Do we want to display the roll and modifier? 
+   
 // ? Set default mod to 0
 // ! Refactor the rolling functions so we're declaring less identical variables (callbacks/promises????) 
-
-//get a number for dice#, parse into the input.  
-//tell it to run let diceRoll x many times.
-    
         
