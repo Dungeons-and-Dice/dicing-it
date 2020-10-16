@@ -27,6 +27,7 @@ $(function(){
 
         rollNumberOfDice: function(){
             const diceNumber = parseInt($('#diceNumber').val());
+            let total = 0;
             for(let i = 1; i <= diceNumber; i++){
                 const diceNumberRoll = this.roll();
                 diceArray.push(diceNumberRoll);
@@ -35,6 +36,10 @@ $(function(){
             
             this.dieContainer.append(`${diceOptions.getModifier()} (Modifier) <br>`);
             console.log(diceArray);
+            for (let i = 0; i < diceArray.length; i++){
+                total += diceArray[i];
+            }
+            console.log(total)
             // use forEach loop to add all the items or list them or something (map with a variable)
             // Print total
         },
@@ -53,6 +58,7 @@ $(function(){
     // Second Dice Part
 
     $('#otherDice button').click(function () {
+        diceArray.length = 0;
         chosenDice = $('input[name="dice"]:checked').val();
         diceOptions.rollNumberOfDice()
     });
@@ -61,3 +67,4 @@ $(function(){
 // ? Set default mod to 0
 // ! Refactor the rolling functions so we're declaring less identical variables (callbacks/promises????) 
         
+//take the values of all the dice rolled, add em together, give total!!!
