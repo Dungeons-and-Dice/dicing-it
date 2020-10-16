@@ -28,8 +28,11 @@ $(function(){
         rollNumberOfDice: function(){
             const diceNumber = parseInt($('#diceNumber').val());
             let total = 0;
-            this.insertRollContainer.append(`<li class="insertRoll"></li>`)
-            insertRoll = $('.insertRoll');
+            let changeClass = $('ul#insertRollContainer li').length;
+            console.log(changeClass)
+            this.insertRollContainer.append(`<li class=${changeClass}></li>`)
+            insertRoll =  $(`.${changeClass}`);
+            // $('li').removeClass().addClass("please" + $(this).val);
             for(let i = 1; i <= diceNumber; i++){
                 const diceNumberRoll = this.roll();
                 diceArray.push(diceNumberRoll);
