@@ -22,29 +22,29 @@ $(function(){
         },
 
         dieContainer : $('#dieContainer'),
+        insertRollContainer: $('#insertRollContainer'),
 
+        
         rollNumberOfDice: function(){
             const diceNumber = parseInt($('#diceNumber').val());
             let total = 0;
+            this.insertRollContainer.html(`<li class="insertRoll> </li>`)
+            insertRoll = $('.insertRoll');
             for(let i = 1; i <= diceNumber; i++){
                 const diceNumberRoll = this.roll();
                 diceArray.push(diceNumberRoll);
-                this.dieContainer.append(`${diceNumberRoll} + `);
+                insertRoll.append(`${diceNumberRoll} + `);
             }
             
             let modifier = diceOptions.getModifier();
-
-            this.dieContainer.append(`${modifier} (Modifier)`);
-            console.log(diceArray);
 
             for (let i = 0; i < diceArray.length; i++){
                 total += diceArray[i];
             }
             
             let result = total + modifier;
-            this.dieContainer.append(` = ${result} <br>`);
 
-
+            insertRoll.append(`<span class="modifier"> ${modifier} </span> = ${result} <br>`);
         },
     };
     
@@ -54,7 +54,7 @@ $(function(){
         let modifier = diceOptions.getModifier();
         let result = diceRoll + modifier;
         
-        $('#printedNumber').text(`${diceRoll} + ${modifier} = ${result}`);
+        $('#printedNumber').html(`${diceRoll} + <span class="modifier"> ${modifier} </span> = ${result}`);
     });
 
     // Second Dice Part

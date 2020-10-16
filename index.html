@@ -5,65 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DICE</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <h1>Dice Roller</h1>
+    <header>
+        <div class="wrapper">
+            <h1>Dice Roller</h1>
+        </div>
+    </header>
     <!-- Quick Roll -->
-    <div>
-        <h2>Quick Roll</h2>
-        <div id="buttons">
-            <button id="d4">d4</button>
-            <button id="d6">d6</button>
-            <button id="d8">d8</button>
-            <button id="d10">d10</button>
-            <button id="d12">d12</button>
-            <button id="d20">d20</button>
-            <button id="d100">d100</button>           
+    <main>
+        <section>
+            <div class="wrapper">
+                <h2>Quick Roll</h2>
+                <div id="buttons">
+                    <button id="d4">d4</button>
+                    <button id="d6">d6</button>
+                    <button id="d8">d8</button>
+                    <button id="d10">d10</button>
+                    <button id="d12">d12</button>
+                    <button id="d20">d20</button>
+                    <button id="d100">d100</button>           
+                </div>
+                <div>
+                    <label for="modifier">Modifier</label>
+                    <input type="number" id="modifier" placeholder="Add your modifier" required value="0">
+                </div>
+                <div id=printedNumber></div>
+            </div>
+        </section>
+    
+        <!-- Multi Roll -->
+        <section>
+            <div class="wrapper">
+                <h2> Multi Roll</h2>
+                <fieldset id="otherDice">
+                    <legend>Select number of dice and dice</legend>
+                    
+                    <div>
+                        <label for="diceNumber"> Number of Dice: </label>
+                        <input type="number" id="diceNumber" required value="1">
+                    </div>
+                    
+                    <div>
+                        <label for="dice4">d4</label>
+                        <input type="radio" id="dice4" value="d4" name="dice">
+                        
+                        <label for="dice6">d6</label>
+                        <input type="radio" id="dice6" value="d6" name="dice">
+                        
+                        <label for="dice8">d8</label>
+                        <input type="radio" id="dice8" value="d8" name="dice">
+                        
+                        <label for="dice10">d10</label>
+                        <input type="radio" id="dice10" value="d10" name="dice">
+                        
+                        <label for="dice12">d12</label>
+                        <input type="radio" id="dice12" value="d12" name="dice">
+                        
+                        <label for="dice20">d20</label>
+                        <input type="radio" id="dice20" value="d20" name="dice">
+                        
+                        <label for="dice100">d100</label>
+                        <input type="radio" id="dice100" value="d100" name="dice">
+                    </div>
+                    
+                    <button>Submit</button>
+                    <button id="clear"> Clear History </button>
+                </fieldset>
+        
+                <div id="dieContainer" class="diceNumberResult">
+                    <ul class="insertRollContainer">
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <p>SPOOK A DOOK</p>
         </div>
-        <div>
-            <label for="modifier">Modifier</label>
-            <input type="number" id="modifier" placeholder="Add your modifier" required value="0">
-        </div>
-        <div id=printedNumber></div>
-    </div>
-
-    <!-- Not a Quick Roll -->
-    <div>
-        <h2> Not a Quick Roll</h2>
-        <fieldset id="otherDice">
-            <legend>Select number of dice and dice</legend>
-
-            <label for="diceNumber"> Number of Dice: </label>
-            <input type="number" id="diceNumber" required value="1">
-            
-            <label for="dice4">d4</label>
-            <input type="radio" id="dice4" value="d4" name="dice">
-            
-            <label for="dice6">d6</label>
-            <input type="radio" id="dice6" value="d6" name="dice">
-            
-            <label for="dice8">d8</label>
-            <input type="radio" id="dice8" value="d8" name="dice">
-            
-            <label for="dice10">d10</label>
-            <input type="radio" id="dice10" value="d10" name="dice">
-            
-            <label for="dice12">d12</label>
-            <input type="radio" id="dice12" value="d12" name="dice">
-            
-            <label for="dice20">d20</label>
-            <input type="radio" id="dice20" value="d20" name="dice">
-            
-            <label for="dice100">d100</label>
-            <input type="radio" id="dice100" value="d100" name="dice">
-            
-            <button>Submit</button>
-
-            <button id="clear"> Clear History </button>
-        </fieldset>
-
-        <div id="dieContainer" class="diceNumberResult"></div>
-    </div>
+    </footer>
 
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="./script.js"></script>
