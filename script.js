@@ -28,7 +28,7 @@ $(function(){
         rollNumberOfDice: function(){
             const diceNumber = parseInt($('#diceNumber').val());
             let total = 0;
-            this.insertRollContainer.html(`<li class="insertRoll> </li>`)
+            this.insertRollContainer.append(`<li class="insertRoll"></li>`)
             insertRoll = $('.insertRoll');
             for(let i = 1; i <= diceNumber; i++){
                 const diceNumberRoll = this.roll();
@@ -44,7 +44,7 @@ $(function(){
             
             let result = total + modifier;
 
-            insertRoll.append(`<span class="modifier"> ${modifier} </span> = ${result} <br>`);
+            insertRoll.append(`<span class="modifier"> ${modifier} </span> = ${result}`);
         },
     };
     
