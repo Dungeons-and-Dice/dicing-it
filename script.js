@@ -23,8 +23,6 @@ $(function(){
 
         dieContainer : $('#dieContainer'),
 
-        // for (let i = 0; i < diceArrray.length; i++ ) {sum += diceArray[i]}
-
         rollNumberOfDice: function(){
             const diceNumber = parseInt($('#diceNumber').val());
             let total = 0;
@@ -34,17 +32,21 @@ $(function(){
                 this.dieContainer.append(`${diceNumberRoll} + `);
             }
             
-            this.dieContainer.append(`${diceOptions.getModifier()} (Modifier) <br>`);
+            let modifier = diceOptions.getModifier();
+
+            this.dieContainer.append(`${modifier} (Modifier)`);
             console.log(diceArray);
+
             for (let i = 0; i < diceArray.length; i++){
                 total += diceArray[i];
             }
-            console.log(total)
-            // use forEach loop to add all the items or list them or something (map with a variable)
-            // Print total
+            
+            let result = total + modifier;
+            this.dieContainer.append(` = ${result} <br>`);
+
+
         },
     };
-    
     
     $('#buttons button').click(function() {
         chosenDice = $(this).attr('id');
@@ -61,6 +63,10 @@ $(function(){
         diceArray.length = 0;
         chosenDice = $('input[name="dice"]:checked').val();
         diceOptions.rollNumberOfDice()
+    });
+
+    $('#clear').click(function () {
+        $('#dieContainer').html('');
     });
 });
    
