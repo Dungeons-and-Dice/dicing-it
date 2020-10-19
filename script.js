@@ -20,6 +20,11 @@ $(function(){
             const inputModifier = parseInt($('#modifier').val());
             return(inputModifier);
         },
+        getSecondModifier: function() {
+            const inputSecondModifier = parseInt($('#secondModifier').val());
+            // console.log(inputSecondModifier)
+            return(inputSecondModifier);
+        },
 
         dieContainer : $('#dieContainer'),
         insertRollContainer: $('#insertRollContainer'),
@@ -39,15 +44,15 @@ $(function(){
                 insertRoll.append(`${diceNumberRoll} + `);
             }
             
-            let modifier = diceOptions.getModifier();
+            let secondModifier = diceOptions.getSecondModifier();
 
             for (let i = 0; i < diceArray.length; i++){
                 total += diceArray[i];
             }
             
-            let result = total + modifier;
+            let result = total + secondModifier;
 
-            insertRoll.append(`<span class="modifier"> ${modifier} </span> = ${result}`);
+            insertRoll.append(`<span class="secondModifier"> ${secondModifier} </span> = ${result}`);
         },
     };
     
