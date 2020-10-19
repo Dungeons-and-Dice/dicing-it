@@ -69,7 +69,7 @@ $(function(){
     });
 
     $('#clear').click(function () {
-        $('#dieContainer').html('');
+        $('#insertRollContainer').html('');
     });
 });
    
