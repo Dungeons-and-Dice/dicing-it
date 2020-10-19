@@ -263,8 +263,8 @@ footer {
   --section_bg:#160202;
   --text_med: #b82b2b;
   --text_dark: #160202;
-  --primary: #9c1c1c;
-  --secondary: #dacfb7;
+  --primary: #e2503d;
+  --secondary: #ecdacb;
   --tertiary: #bba07f;
 }
 
@@ -326,12 +326,21 @@ main .quickRoll #buttons button:hover {
 }
 
 main .quickRoll #buttons #d100 {
-  padding: 5px 165px;
+  display: inline-block;
 }
 
 main .multiRoll {
   width: calc(60% - 40px);
   margin: 20px;
+}
+
+#modifier {
+  background: var(--secondary);
+  outline: none;
+  border: 2px solid var(--primary);
+  padding: 5px;
+  border-radius: 15px;
+  margin: 5px;
 }
 
 .insertRollContainer li {
