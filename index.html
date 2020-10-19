@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DICE</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&family=Open+Sans&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@
     </header>
     <!-- Quick Roll -->
     <main>
-        <section>
+        <section class="quickRoll">
             <div class="wrapper">
                 <h2>Quick Roll</h2>
                 <div id="buttons">
@@ -36,7 +37,7 @@
         </section>
     
         <!-- Multi Roll -->
-        <section>
+        <section class="multiRoll">
             <div class="wrapper">
                 <h2> Multi Roll</h2>
                 <fieldset id="otherDice">
@@ -51,7 +52,7 @@
                         <input type="number" id="secondModifier" placeholder="Add your modifier" required value="0">
                     </div>
                     
-                    <div>
+                    <div class="radioDice">
                         <label for="dice4">d4</label>
                         <input type="radio" id="dice4" value="d4" name="dice">
                         
