@@ -345,4 +345,12 @@ main .multiRoll {
 
 .insertRollContainer li {
   list-style: none;
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }

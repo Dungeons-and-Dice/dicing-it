@@ -40,21 +40,24 @@
         <section class="multiRoll">
             <div class="wrapper">
                 <h2> Multi Roll</h2>
-                <fieldset id="otherDice">
-                    <legend>Select number of dice and dice</legend>
+                <form id="otherDice">
                     
-                    <div>
+                    <fieldset>
+                        <legend>Select number of dice</legend>
                         <label for="diceNumber"> Number of Dice: </label>
                         <input type="number" id="diceNumber" required value="1">
-                    </div>
+                    
                     <div>
                         <label for="secondModifier">Modifier</label>
                         <input type="number" id="secondModifier" placeholder="Add your modifier" required value="0">
                     </div>
                     
-                    <div class="radioDice">
+                    </fieldset>
+                    
+                <fieldset class="radioDice">
+                        <legend>Select type of dice</legend>
                         <label for="dice4">d4</label>
-                        <input type="radio" id="dice4" value="d4" name="dice">
+                        <input type="radio" id="dice4" value="d4" name="dice" required>
                         
                         <label for="dice6">d6</label>
                         <input type="radio" id="dice6" value="d6" name="dice">
@@ -73,11 +76,11 @@
                         
                         <label for="dice100">d100</label>
                         <input type="radio" id="dice100" value="d100" name="dice">
-                    </div>
+                    </fieldset>
                     
                     <button>Submit</button>
                     <button id="clear"> Clear History </button>
-                </fieldset>
+                </form>
         
                 <div id="dieContainer" class="diceNumberResult">
                     <ul class="insertRollContainer" id="insertRollContainer">
