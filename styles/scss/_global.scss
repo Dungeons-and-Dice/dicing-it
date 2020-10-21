@@ -23,14 +23,19 @@ footer{
     color: var(--text_light);
 }
 
+ul{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 //* Variables
 :root {
-    --bg_main: #dbc2c2;
+    --bg_main: #c2dbc7;
     --text_light: #d1d1d1;
-    --section_bg:#160202;
-    --text_med: #b82b2b;
-    --text_dark: #160202;
-    --primary: #e2503d;
+    --section_bg:#050a05;
+    --text_med: #8a8989;
+    --text_dark: #252323;
+    --primary: #285837;
     --secondary: #ecdacb;
     --tertiary: #bba07f;
   }

@@ -67,7 +67,8 @@ $(function(){
 
     // Second Dice Part
 
-    $('#otherDice button').click(function () {
+    $('#otherDice button').click(function (e) {
+        e.preventDefault();
         diceArray.length = 0;
         chosenDice = $('input[name="dice"]:checked').val();
         diceOptions.rollNumberOfDice()

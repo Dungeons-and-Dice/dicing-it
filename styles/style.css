@@ -257,13 +257,23 @@ footer {
   color: var(--text_light);
 }
 
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
 :root {
-  --bg_main: #dbc2c2;
+  --bg_main: #c2dbc7;
   --text_light: #d1d1d1;
-  --section_bg:#160202;
-  --text_med: #b82b2b;
-  --text_dark: #160202;
-  --primary: #e2503d;
+  --section_bg:#050a05;
+  --text_med: #8a8989;
+  --text_dark: #252323;
+  --primary: #285837;
   --secondary: #ecdacb;
   --tertiary: #bba07f;
 }
@@ -332,9 +342,25 @@ main .quickRoll #buttons #d100 {
 main .multiRoll {
   width: calc(60% - 40px);
   margin: 20px;
+  border: 4px solid var(--primary);
+  border-radius: 15px;
 }
 
-#modifier {
+main .multiRoll button {
+  background: var(--primary);
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 15px;
+}
+
+main .multiRoll button:hover {
+  background: var(--section_bg);
+  color: var(--text_light);
+}
+
+#modifier, #secondModifier, #diceNumber {
   background: var(--secondary);
   outline: none;
   border: 2px solid var(--primary);
@@ -345,12 +371,9 @@ main .multiRoll {
 
 .insertRollContainer li {
   list-style: none;
-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  font-size: 1.5rem;
+}
+
+#printedNumber {
+  font-size: 1.5rem;
 }
