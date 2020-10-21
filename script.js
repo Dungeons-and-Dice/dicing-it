@@ -59,7 +59,7 @@ $(function(){
         checkForNum: function() {
             if (diceRoll === 1) {
                 $('#printedNumber').addClass('animate__hinge');
-            } else if (diceRoll === 20) {
+            } else if (diceRoll === diceOptions[chosenDice]) {
                 $('#printedNumber').addClass('animate__heartBeat');
             } else { 
                 console.log('everything is fine');
