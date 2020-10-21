@@ -1,5 +1,6 @@
 $(function(){
     let chosenDice = 0;
+    let diceRoll = 0;
 
     // Try to get this into diceOptions
     const diceArray = [];
@@ -54,15 +55,28 @@ $(function(){
 
             insertRoll.append(`<span class="secondModifier"> ${secondModifier} </span> = ${result}`);
         },
+
+        checkForNum: function() {
+            if (diceRoll === 1) {
+                $('#printedNumber').addClass('animate__hinge');
+            } else if (diceRoll === 20) {
+                $('#printedNumber').addClass('animate__heartBeat');
+            } else { 
+                console.log('everything is fine');
+            }
+        }
     };
     
     $('#buttons button').click(function() {
+        $('#printedNumber').removeClass('animate__hinge').removeClass('animate__heartBeat');
         chosenDice = $(this).attr('id');
-        let diceRoll = diceOptions.roll();
+        diceRoll = diceOptions.roll();
         let modifier = diceOptions.getModifier();
         let result = diceRoll + modifier;
+        diceOptions.checkForNum();
         
         $('#printedNumber').html(`${diceRoll} + <span class="modifier"> ${modifier} </span> = ${result}`);
+
     });
 
     // Second Dice Part
@@ -82,4 +96,3 @@ $(function(){
 // ? Set default mod to 0
 // ! Refactor the rolling functions so we're declaring less identical variables (callbacks/promises????) 
         
-//take the values of all the dice rolled, add em together, give total!!!
