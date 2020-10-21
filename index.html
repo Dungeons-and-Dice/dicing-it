@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DICE</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;900&family=Open+Sans&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@
     </header>
     <!-- Quick Roll -->
     <main>
-        <section>
+        <section class="quickRoll">
             <div class="wrapper">
                 <h2>Quick Roll</h2>
                 <div id="buttons">
@@ -36,7 +37,7 @@
         </section>
     
         <!-- Multi Roll -->
-        <section>
+        <section class="multiRoll">
             <div class="wrapper">
                 <h2> Multi Roll</h2>
                 <form id="otherDice">
@@ -45,9 +46,15 @@
                         <legend>Select number of dice</legend>
                         <label for="diceNumber"> Number of Dice: </label>
                         <input type="number" id="diceNumber" required value="1">
+                    
+                    <div>
+                        <label for="secondModifier">Modifier</label>
+                        <input type="number" id="secondModifier" placeholder="Add your modifier" required value="0">
+                    </div>
+                    
                     </fieldset>
                     
-                <fieldset>
+                <fieldset class="radioDice">
                         <legend>Select type of dice</legend>
                         <label for="dice4">d4</label>
                         <input type="radio" id="dice4" value="d4" name="dice" required>
@@ -86,7 +93,7 @@
 
     <footer>
         <div class="wrapper">
-            <p>SPOOK A DOOK</p>
+            <p>An Audra and Lucas Production 2020</p>
         </div>
     </footer>
 

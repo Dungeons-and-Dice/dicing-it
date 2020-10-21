@@ -3,12 +3,36 @@ html {
     text-align: center;
     line-height: 1.5;
     font-size: 100%;
+    background: var(--bg_main);
 }
+
 .wrapper {
     max-width: 1080px;
     width: 85%;
     margin: 0 auto;
     font-size: 1rem;
+    // background: var(--section_bg);
 }
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--section_bg);
+    color: var(--text_light);
+}
+
+//* Variables
+:root {
+    --bg_main: #dbc2c2;
+    --text_light: #d1d1d1;
+    --section_bg:#160202;
+    --text_med: #b82b2b;
+    --text_dark: #160202;
+    --primary: #e2503d;
+    --secondary: #ecdacb;
+    --tertiary: #bba07f;
+  }
 
 //* Variables
