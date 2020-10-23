@@ -1,8 +1,9 @@
 main{
-    display: flex;
-    min-height:calc(93vh - 30px);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    min-height:calc(100vh - 118px);
         .quickRoll{
-        width: calc(40% - 40px);
+        // width: calc(40% - 40px);
         margin:20px;
         border: 4px solid $primary;
         border-radius: 15px;
@@ -30,7 +31,7 @@ main{
         }
     }
     .multiRoll{
-        width: calc(60% - 40px);
+        // width: calc(60% - 40px);
         margin: 20px;
         border: 4px solid $primary;
         border-radius: 15px;
@@ -62,18 +63,26 @@ main{
     padding: 5px;
     border-radius: 15px;
     margin: 5px;
+
+}
+#modifier{
+    margin-bottom: 20px;
 }
 
 .insertRollContainer{
     max-height: 30vh;
     overflow-y: scroll;
     display: block;
+    
 
     li {
         list-style: none;
         font-size: 1.5rem;
+        padding: 10px 0;
+    border-bottom: 2px solid black;
     }
 }
 #printedNumber{
     font-size: 1.5rem;
 }
+

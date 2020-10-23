@@ -1,0 +1,7 @@
+//---------------------------------- Media Queries -------------------------------------//
+
+@media (max-width: 730px){
+    main{
+        grid-template-columns: none;
+    }
+}

@@ -13,7 +13,8 @@ footer{
     color: $text-light;
     margin: 0%;
     padding: 3px;
-
+    grid-row-start: 3;
+    grid-row-end: 4;
     p {
         margin: 0;
     }

@@ -53,7 +53,7 @@ $(function(){
             
             let result = total + secondModifier;
 
-            insertRoll.append(`<span class="secondModifier"> ${secondModifier} </span> = ${result}`);
+            insertRoll.append(`<span class="secondModifier"> ${secondModifier} </span> = <span class="bold"> ${result} </span>`);
         },
 
         checkForNum: function() {
@@ -75,7 +75,7 @@ $(function(){
         let result = diceRoll + modifier;
         diceOptions.checkForNum();
         
-        $('#printedNumber').html(`${diceRoll} + <span class="modifier"> ${modifier} </span> = ${result}`);
+        $('#printedNumber').html(`${diceRoll} + <span class="modifier"> ${modifier} </span> = <span class="bold"> ${result} </span>`);
 
     });
 
