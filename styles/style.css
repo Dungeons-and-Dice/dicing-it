@@ -239,7 +239,7 @@ html {
   text-align: center;
   line-height: 1.5;
   font-size: 100%;
-  background: var(--bg_main);
+  background: #c2dbc7;
 }
 
 .wrapper {
@@ -253,8 +253,8 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: var(--section_bg);
-  color: var(--text_light);
+  background: #050a05;
+  color: #d1d1d1;
 }
 
 ul {
@@ -267,33 +267,22 @@ ul {
           flex-direction: column-reverse;
 }
 
-:root {
-  --bg_main: #c2dbc7;
-  --text_light: #d1d1d1;
-  --section_bg:#050a05;
-  --text_med: #8a8989;
-  --text_dark: #252323;
-  --primary: #285837;
-  --secondary: #ecdacb;
-  --tertiary: #bba07f;
-}
-
 html {
   font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
   font-family: 'Noto Sans JP', sans-serif;
-  color: var(--text_light);
+  color: #d1d1d1;
 }
 
 h2 {
-  color: var(--text_dark);
+  color: #252323;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
 header {
-  background: var(--section_bg);
+  background: #050a05;
 }
 
 header h1 {
@@ -310,7 +299,7 @@ main {
 main .quickRoll {
   width: calc(40% - 40px);
   margin: 20px;
-  border: 4px solid var(--primary);
+  border: 4px solid #285837;
   border-radius: 15px;
 }
 
@@ -322,7 +311,7 @@ main .quickRoll #buttons {
 }
 
 main .quickRoll #buttons button {
-  background: var(--primary);
+  background: #285837;
   border: none;
   cursor: pointer;
   padding: 5px;
@@ -331,8 +320,8 @@ main .quickRoll #buttons button {
 }
 
 main .quickRoll #buttons button:hover {
-  background: var(--section_bg);
-  color: var(--text_light);
+  background: #050a05;
+  color: #d1d1d1;
 }
 
 main .quickRoll #buttons #d100 {
@@ -342,12 +331,12 @@ main .quickRoll #buttons #d100 {
 main .multiRoll {
   width: calc(60% - 40px);
   margin: 20px;
-  border: 4px solid var(--primary);
+  border: 4px solid #285837;
   border-radius: 15px;
 }
 
 main .multiRoll button {
-  background: var(--primary);
+  background: #285837;
   border: none;
   cursor: pointer;
   padding: 5px;
@@ -356,14 +345,14 @@ main .multiRoll button {
 }
 
 main .multiRoll button:hover {
-  background: var(--section_bg);
-  color: var(--text_light);
+  background: #050a05;
+  color: #d1d1d1;
 }
 
 #modifier, #secondModifier, #diceNumber {
-  background: var(--secondary);
+  background: #ecdacb;
   outline: none;
-  border: 2px solid var(--primary);
+  border: 2px solid #285837;
   padding: 5px;
   border-radius: 15px;
   margin: 5px;

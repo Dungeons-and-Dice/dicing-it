@@ -7,10 +7,10 @@ html{
 
 h1{
     font-family: 'Noto Sans JP', sans-serif;
-    color: var(--text_light);
+    color: $text_light;
 }
 
 h2{
-    color: var(--text_dark);
+    color: $text_dark;
     font-family: 'Noto Sans JP', sans-serif;
 }
