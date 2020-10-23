@@ -35,7 +35,7 @@ $(function(){
             const diceNumber = parseInt($('#diceNumber').val());
             let total = 0;
             let changeClass = $('ul#insertRollContainer li').length;
-            console.log(changeClass)
+            // console.log(changeClass)
             this.insertRollContainer.append(`<li class=${changeClass}></li>`)
             insertRoll =  $(`.${changeClass}`);
             // $('li').removeClass().addClass("please" + $(this).val);
