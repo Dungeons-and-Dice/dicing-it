@@ -249,16 +249,6 @@ html {
   font-size: 1rem;
 }
 
-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
 html {
   font-family: 'Open Sans', sans-serif;
 }
@@ -287,14 +277,18 @@ footer {
   background: #050a05;
   color: #d1d1d1;
   margin: 0%;
-  padding: 5px;
+  padding: 3px;
+}
+
+footer p {
+  margin: 0;
 }
 
 main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: calc(100vh - 30px);
+  min-height: calc(93vh - 30px);
 }
 
 main .quickRoll {
@@ -360,8 +354,9 @@ main .multiRoll button:hover {
 }
 
 .insertRollContainer {
-  overflow: auto;
   max-height: 30vh;
+  overflow-y: scroll;
+  display: block;
 }
 
 .insertRollContainer li {

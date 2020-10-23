@@ -36,7 +36,7 @@ $(function(){
             let total = 0;
             let changeClass = $('ul#insertRollContainer li').length;
             // console.log(changeClass)
-            this.insertRollContainer.append(`<li class=${changeClass}></li>`)
+            this.insertRollContainer.prepend(`<li class=${changeClass}></li>`);
             insertRoll =  $(`.${changeClass}`);
             // $('li').removeClass().addClass("please" + $(this).val);
             for(let i = 1; i <= diceNumber; i++){
