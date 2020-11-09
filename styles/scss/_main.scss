@@ -17,11 +17,12 @@ main{
                 padding: 5px;
                 margin: 5px;
                 border-radius: 15px;
+                color: $text_light;
                 // box-shadow: 5px 5px var(--secondary);
             }
             button:hover{
                 background: $section_bg;
-                color: $text_light;
+                
                 // box-shadow: 10px 8px var(--secondary);
             }
             #d100{
@@ -43,14 +44,15 @@ main{
             background: $primary;
             border: none;
             cursor: pointer;
-            padding: 5px;
+            padding: 5px 10px;
             margin: 5px;
             border-radius: 15px;
+            color: $text_light;
             // box-shadow: 5px 5px var(--secondary);
         }
         button:hover{
             background: $section_bg;
-            color: $text_light;
+            
             // box-shadow: 10px 8px var(--secondary);
         }
     }

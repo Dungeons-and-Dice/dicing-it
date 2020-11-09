@@ -329,11 +329,11 @@ main .quickRoll #buttons button {
   padding: 5px;
   margin: 5px;
   border-radius: 15px;
+  color: #d1d1d1;
 }
 
 main .quickRoll #buttons button:hover {
   background: #050a05;
-  color: #d1d1d1;
 }
 
 main .quickRoll #buttons #d100 {
@@ -350,14 +350,14 @@ main .multiRoll button {
   background: #285837;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 5px;
   border-radius: 15px;
+  color: #d1d1d1;
 }
 
 main .multiRoll button:hover {
   background: #050a05;
-  color: #d1d1d1;
 }
 
 #modifier, #secondModifier, #diceNumber {
